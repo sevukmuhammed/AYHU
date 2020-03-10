@@ -1,12 +1,12 @@
-package com.example.ayhu
+package com.example.ayhu.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import com.example.ayhu.R
 import com.example.ayhu.model.FuelInformation
-import com.example.ayhu.ui.VehicleAddingActivity
 import com.example.movieclone.network.RetrofitFactory
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
