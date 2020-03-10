@@ -1,10 +1,14 @@
 package com.example.ayhu
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.example.ayhu.model.FuelInformation
+import com.example.ayhu.ui.VehicleAddingActivity
 import com.example.movieclone.network.RetrofitFactory
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -13,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SystemUIVisibility()
         setContentView(R.layout.activity_main)
         val apiService = RetrofitFactory.getFuelInformation()
             .getFuelInfo("Ankara")//kullanicidan alınacak değer
@@ -27,5 +32,17 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Başarılı","Başarılı")
             }
         })
+        cv_vehicle_adding.setOnClickListener {
+            val intent = Intent(this, VehicleAddingActivity::class.java)
+            startActivity(intent)
+        }
+    }
+    fun SystemUIVisibility(){
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
     }
 }
