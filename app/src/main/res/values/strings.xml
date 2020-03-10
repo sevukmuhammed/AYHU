@@ -1,9 +1,23 @@
 <resources>
     <string name="app_name">AYHU</string>
-    <string name="vehicle">
-        <item>"Mercedes"</item>
-        <item>"BMW"</item>
-    </string>
+    <string-array name="brands">
+        <item>brand</item>
+        <item>brand1</item>
+        <item>brand2</item>
+        <item>brand3</item>
+    </string-array>
+    <string-array name="models">
+        <item>model</item>
+        <item>model1</item>
+        <item>model2</item>
+        <item>model3</item>
+    </string-array>
+    <string-array name="packages">
+        <item>package</item>
+        <item>package1</item>
+        <item>package2</item>
+        <item>package3</item>
+    </string-array>
 
 </resources>
 
