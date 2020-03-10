@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AYHU</string>
+    <string name="vehicle">
+        <item>"Mercedes"</item>
+        <item>"BMW"</item>
+    </string>
+
 </resources>
+
