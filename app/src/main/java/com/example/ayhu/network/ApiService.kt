@@ -9,10 +9,6 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 
-/*
-Created by Muhammed Yusuf ÇİL 
-Date : 2/18/2020
-*/
 interface ApiService{
     @POST("AjaxProcess/GetFuelPricesList")
     fun getFuelInfo(@Body Cityname:String?): Call<FuelInformation>

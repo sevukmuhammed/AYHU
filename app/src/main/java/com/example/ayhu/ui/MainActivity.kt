@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         SystemUIVisibility()
         setContentView(R.layout.activity_main)
+
         val apiService = RetrofitFactory.getFuelInformation()
             .getFuelInfo("Ankara")//kullanicidan alınacak değer
         apiService.enqueue(object : Callback<FuelInformation>{
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Başarılı","Başarılı")
             }
         })
+
         cv_vehicle_adding.setOnClickListener {
             val intent = Intent(this, VehicleAddingActivity::class.java)
             startActivity(intent)

@@ -6,11 +6,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Headers
 
-/* 
-Created by Muhammed Yusuf ÇİL 
-Date : 2/18/2020
-*/
-
 class RetrofitFactory {
     companion object {
         var BASE_URL =

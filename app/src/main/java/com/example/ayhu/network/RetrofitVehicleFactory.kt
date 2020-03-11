@@ -4,10 +4,7 @@ import com.example.movieclone.network.ApiService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-/* 
-Created by Muhammed Yusuf ÇİL 
-Date : 3/11/2020
-*/
+
 class RetrofitVehicleFactory {
     companion object {
         var BASE_URL =
