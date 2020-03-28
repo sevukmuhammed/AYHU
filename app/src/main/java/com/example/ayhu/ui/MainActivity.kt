@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
+
 //                val apiVehicleService= RetrofitVehicleFactory.getVehicleInformation().getVehicleInfo()
 //        apiVehicleService.enqueue(object : Callback<VehicleInformation>{
 //            override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
@@ -33,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 //                Log.d("Başarılı","Başarılı")
 //            }
 //        })
+
 
         cv_vehicle_adding.setOnClickListener {
             var intent:Intent= Intent(this,VehicleAddingActivity::class.java)

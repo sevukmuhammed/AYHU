@@ -9,10 +9,7 @@ import com.example.ayhu.viewholder.BaseViewHolder
 import com.example.ayhu.viewholder.CarAddedViewHolder
 import java.lang.IllegalArgumentException
 
-/* 
-Created by Muhammed Yusuf ÇİL 
-Date : 3/10/2020
-*/
+
 class AppRecyclerViewAdapter(
     var items: MutableList<BaseModel>,
     var recyclerViewClickListener: RecyclerViewClickListener
