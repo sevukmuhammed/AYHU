@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.example.ayhu.R
-import com.example.ayhu.model.VehicleInformation
-import com.example.ayhu.network.RetrofitVehicleFactory
+import com.example.ayhu.dto.FuelInfoDTO
+import com.example.ayhu.model.FuelInformation
+import com.example.movieclone.network.RetrofitFactory
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class VehicleAddingActivity : AppCompatActivity() {
 
@@ -17,16 +19,25 @@ class VehicleAddingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         SystemUIVisibility()
         setContentView(R.layout.activity_vehicle_adding)
-        val apiService=RetrofitVehicleFactory.getVehicleInformation().getVehicleInfo()
-        apiService.enqueue(object : Callback<VehicleInformation>{
-            override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
-                Log.d("başarısız","başarısız")
+
+        val apiService = RetrofitFactory.getFuelInformation()
+            .getWhereToBuyFuel("kadikoy", "istanbul")//kullanicidan alınacak değer
+        apiService.enqueue(object : Callback<FuelInformation> {
+            override fun onFailure(call: Call<FuelInformation>, t: Throwable) {
+                Log.d("Başarısız","Başarısız")
             }
             override fun onResponse(
-                call: Call<VehicleInformation>,
-                response: Response<VehicleInformation>
-            ){
+                call: Call<FuelInformation>,
+                response: Response<FuelInformation>
+            ) {
                 Log.d("Başarılı","Başarılı")
+                response.body()?.result?.forEach {
+                    var fuelInfoDTO:FuelInfoDTO= FuelInfoDTO(
+                        benzin = it.benzin,
+                        marka = it.marka
+                    )
+                    Log.d("marka",it.marka)
+                }
             }
         })
     }

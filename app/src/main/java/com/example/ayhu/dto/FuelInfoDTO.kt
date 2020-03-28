@@ -9,10 +9,8 @@ Created by Muhammed Yusuf ÇİL
 Date : 3/10/2020
 */
 data class FuelInfoDTO(
-    var _IlceAd: String,
-    var _Motorin: Float,
-    var _Kursunsuz95: Float,
-    var _GazYagi: Float
+    var benzin: Float,
+    var marka: String
 ) : BaseModel {
     override val type: Int
         get() = TYPE_FUEL
