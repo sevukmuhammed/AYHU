@@ -14,6 +14,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import android.content.Intent
 
+/*
+Created by Emre UYGUN
+*/
 
 class VehicleAddingActivity : AppCompatActivity() {
 
