@@ -6,10 +6,8 @@ import com.example.ayhu.model.BaseModel.Companion.TYPE_FUEL
 
 
 data class FuelInfoDTO(
-    var _IlceAd: String,
-    var _Motorin: Float,
-    var _Kursunsuz95: Float,
-    var _GazYagi: Float
+    var benzin: Float,
+    var marka: String
 ) : BaseModel {
     override val type: Int
         get() = TYPE_FUEL

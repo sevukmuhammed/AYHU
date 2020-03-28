@@ -9,7 +9,7 @@ import retrofit2.http.Headers
 class RetrofitFactory {
     companion object {
         var BASE_URL =
-            "https://www.opet.com.tr/"
+        "https://api.collectapi.com/"
         fun getFuelInformation(): ApiService {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

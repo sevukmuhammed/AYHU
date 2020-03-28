@@ -3,16 +3,30 @@ package com.example.movieclone.network
 import com.example.ayhu.model.FuelInformation
 import com.example.ayhu.model.VehicleInformation
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 
-interface ApiService{
-    @POST("AjaxProcess/GetFuelPricesList")
-    fun getFuelInfo(@Body Cityname:String?): Call<FuelInformation>
+
+
+
+/*
+Created by Batuhan Uzunoğlu
+Date : 2/18/2020
+*/
+interface ApiService {
+
+//    @POST("AjaxProcess/GetFuelPricesList")
+//    fun getFuelInfo(@Body Cityname: String?): Call<FuelInformation>
+
+    @Headers(
+        "authorization: apikey 0IZa4vCIVRfJrdMyICeofj:0CdCwHCfYoVthZzgFqOupy"
+        , "content-type: application/json"
+    )
+    @GET("gasPrice/turkeyGasoline")
+    fun getWhereToBuyFuel(@Query("district") district:String, @Query("city") city: String):Call<FuelInformation>
+
+
 
     @POST("markalar/")
-    fun getVehicleInfo():Call<VehicleInformation>
+    fun getVehicleInfo(): Call<VehicleInformation>
 }

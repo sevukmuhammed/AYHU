@@ -18,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Spinner
         android:id="@+id/sp_brand_choose"
         android:layout_width="match_parent"
@@ -51,10 +52,45 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_model_choose" />
+=======
+<!--    <Spinner-->
+<!--        android:id="@+id/sp_brand_choose"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:entries="@string/app_name"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView" />-->
+
+<!--    <Spinner-->
+<!--        android:id="@+id/sp_model_choose"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="96dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:entries="@string/app_name"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/sp_brand_choose" />-->
+<!--    <Spinner-->
+<!--        android:id="@+id/spinner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="96dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/sp_model_choose" />-->
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginTop="540dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +109,7 @@
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent" />
 
-
+        <!--            app:layout_constraintTop_toBottomOf="@+id/sp_package_choose" -->
 
         <Button
             android:layout_width="160dp"
@@ -81,6 +117,7 @@
             android:text="Kaydet"
             app:layout_constraintEnd_toEndOf="parent" />
 
-
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

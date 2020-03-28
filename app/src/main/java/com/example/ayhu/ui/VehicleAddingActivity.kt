@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import com.example.ayhu.R
-import com.example.ayhu.model.VehicleInformation
-import com.example.ayhu.network.RetrofitVehicleFactory
+import com.example.ayhu.dto.FuelInfoDTO
+import com.example.ayhu.model.FuelInformation
+import com.example.movieclone.network.RetrofitFactory
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class VehicleAddingActivity : AppCompatActivity() {
 
@@ -17,6 +19,7 @@ class VehicleAddingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         SystemUIVisibility()
         setContentView(R.layout.activity_vehicle_adding)
+
 //        val apiService=RetrofitVehicleFactory.getVehicleInformation().getVehicleInfo()
 ////        apiService.enqueue(object : Callback<VehicleInformation>{
 ////            override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
@@ -29,6 +32,7 @@ class VehicleAddingActivity : AppCompatActivity() {
 ////                Log.d("Başarılı","Başarılı")
 ////            }
 ////        })
+
     }
     fun SystemUIVisibility(){
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
