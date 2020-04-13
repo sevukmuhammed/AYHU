@@ -69,7 +69,7 @@ class IntroSlideActivity: AppCompatActivity() {
            }
         }
     }
-
+    // version
 
     private fun setupIndicators() {
         val indicators = arrayOfNulls<ImageView>(introSliderAdapter.itemCount)
