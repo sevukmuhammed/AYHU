@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ayhu.R
-import com.example.ayhu.model.IntroSlideModel
+import com.example.ayhu.data.model.IntroSlideModel
 
 /*
 Created by Emre UYGUN

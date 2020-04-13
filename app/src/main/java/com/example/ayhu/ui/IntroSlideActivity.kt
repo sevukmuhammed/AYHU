@@ -8,11 +8,10 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.example.ayhu.R
 import com.example.ayhu.adapter.IntroSliderAdapter
-import com.example.ayhu.model.IntroSlideModel
+import com.example.ayhu.data.model.IntroSlideModel
 import kotlinx.android.synthetic.main.onboarding_screens.*
 
 /*

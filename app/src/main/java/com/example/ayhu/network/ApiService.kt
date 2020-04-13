@@ -1,7 +1,7 @@
 package com.example.movieclone.network
 
-import com.example.ayhu.model.FuelInformation
-import com.example.ayhu.model.VehicleInformation
+import com.example.ayhu.data.model.FuelInformation
+import com.example.ayhu.data.model.VehicleInformation
 import retrofit2.Call
 import retrofit2.http.*
 

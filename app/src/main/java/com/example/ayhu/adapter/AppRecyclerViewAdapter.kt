@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ayhu.R
-import com.example.ayhu.model.BaseModel
+import com.example.ayhu.data.model.BaseModel
 import com.example.ayhu.viewholder.BaseViewHolder
 import com.example.ayhu.viewholder.CarAddedViewHolder
 import java.lang.IllegalArgumentException

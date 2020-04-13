@@ -2,7 +2,7 @@ package com.example.ayhu.viewholder
 
 import android.view.View
 import com.example.ayhu.adapter.RecyclerViewClickListener
-import com.example.ayhu.model.BaseModel
+import com.example.ayhu.data.model.BaseModel
 
 
 class CarAddedViewHolder(var view :View):BaseViewHolder(view) {

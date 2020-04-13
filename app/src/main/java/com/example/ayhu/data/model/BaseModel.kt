@@ -1,4 +1,4 @@
-package com.example.ayhu.model
+package com.example.ayhu.data.model
 
 
 interface BaseModel{

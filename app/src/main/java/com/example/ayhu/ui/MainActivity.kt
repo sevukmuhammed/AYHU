@@ -3,19 +3,10 @@ package com.example.ayhu.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import com.example.ayhu.R
-import com.example.ayhu.adapter.IntroSliderAdapter
-import com.example.ayhu.model.FuelInformation
-import com.example.ayhu.model.VehicleInformation
-import com.example.ayhu.network.RetrofitVehicleFactory
-import com.example.movieclone.network.RetrofitFactory
+import com.example.ayhu.ui.vehicleadding.VehicleAddingActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.onboarding_screens.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,7 +29,8 @@ class MainActivity : AppCompatActivity() {
 
 
         cv_vehicle_adding.setOnClickListener {
-            var intent:Intent= Intent(this,VehicleAddingActivity::class.java)
+            var intent:Intent= Intent(this,
+                VehicleAddingActivity::class.java)
             startActivity(intent)
         }
     }
