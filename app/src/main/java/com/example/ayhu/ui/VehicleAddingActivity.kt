@@ -20,6 +20,26 @@ class VehicleAddingActivity : AppCompatActivity() {
         SystemUIVisibility()
         setContentView(R.layout.activity_vehicle_adding)
 
+        val apiService = RetrofitFactory.getFuelInformation()
+            .getWhereToBuyFuel("kadikoy", "istanbul")//kullanicidan alınacak değer
+        apiService.enqueue(object : Callback<FuelInformation> {
+            override fun onFailure(call: Call<FuelInformation>, t: Throwable) {
+                Log.d("Başarısız","Başarısız")
+            }
+            override fun onResponse(
+                call: Call<FuelInformation>,
+                response: Response<FuelInformation>
+            ) {
+                Log.d("Başarılı","Başarılı")
+                response.body()?.result?.forEach {
+                    var fuelInfoDTO:FuelInfoDTO= FuelInfoDTO(
+                        benzin = it.benzin,
+                        marka = it.marka
+                    )
+                    Log.d("marka",it.marka)
+                }
+            }
+        })
     }
     fun SystemUIVisibility(){
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
