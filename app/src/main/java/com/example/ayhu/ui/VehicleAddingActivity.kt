@@ -25,10 +25,6 @@ class VehicleAddingActivity : AppCompatActivity() {
         SystemUIVisibility()
         setContentView(R.layout.activity_vehicle_adding)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 58de824f924fc4bab8be403717472b1b9e7ce63b
         val apiService = RetrofitFactory.getFuelInformation()
             .getWhereToBuyFuel("kadikoy", "istanbul")//kullanicidan alınacak değer
         apiService.enqueue(object : Callback<FuelInformation> {
@@ -49,8 +45,7 @@ class VehicleAddingActivity : AppCompatActivity() {
                 }
             }
         })
-<<<<<<< HEAD
-=======
+
         goBackButton()
 
 //        val apiService=RetrofitVehicleFactory.getVehicleInformation().getVehicleInfo()
@@ -66,8 +61,6 @@ class VehicleAddingActivity : AppCompatActivity() {
 ////            }
 ////        })
 
-//-asdsa
->>>>>>> 58de824f924fc4bab8be403717472b1b9e7ce63b
     }
     fun SystemUIVisibility(){
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
