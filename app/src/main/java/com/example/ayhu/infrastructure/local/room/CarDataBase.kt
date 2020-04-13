@@ -36,7 +36,6 @@ abstract class CarDataBase : RoomDatabase() {
                                 super.onCreate(db)
                                 Executors.newSingleThreadScheduledExecutor().execute {
                                     CUSTOM?.carItemDAO()!!.getAllCars(
-                                        getCarsBrand()
                                     )
                                 }
                             }

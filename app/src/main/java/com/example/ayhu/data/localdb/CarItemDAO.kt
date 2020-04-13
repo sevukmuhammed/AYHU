@@ -8,7 +8,6 @@ import com.example.ayhu.data.model.CarItem
 
 @Dao
 interface CarItemDAO {
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
     @Query("SELECT * FROM CarItem")
-    fun getAllCars(carItem:List<CarItem>)
+    fun getAllCars():List<CarItem>
 }

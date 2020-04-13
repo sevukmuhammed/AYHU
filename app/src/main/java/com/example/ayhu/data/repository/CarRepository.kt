@@ -10,6 +10,7 @@ import com.example.ayhu.infrastructure.local.room.CarDataBase
 Created by Muhammed Yusuf ÇİL 
 Date : 4/13/2020
 */
+
 class CarRepository (context:Context){
     var carItemDAO: CarItemDAO? = null
 
@@ -18,7 +19,6 @@ class CarRepository (context:Context){
     fun getDataBase(context: Context) {
         db = CarDataBase.getCustom(context)!!
     }
-
 
     init {
         val db = CarDataBase.getCustom(context)
