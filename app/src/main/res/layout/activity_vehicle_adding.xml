@@ -18,6 +18,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <Spinner
+        android:id="@+id/sp_brand_choose"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+
+        android:entries="@array/brands"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <Spinner
+        android:id="@+id/sp_model_choose"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="96dp"
+        android:entries="@array/models"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_brand_choose" />
+
+    <Spinner
+        android:id="@+id/sp_package_choose"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="100dp"
+        android:entries="@array/packages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_model_choose" />
+=======
 <!--    <Spinner-->
 <!--        android:id="@+id/sp_brand_choose"-->
 <!--        android:layout_width="match_parent"-->
@@ -55,14 +90,18 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="584dp"
+
+        android:layout_marginTop="540dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
+            android:id="@+id/goBack1"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
@@ -70,15 +109,14 @@
             android:textColor="@color/Black"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent" />
-        <!--            app:layout_constraintTop_toBottomOf="@+id/sp_package_choose" -->
 
+        <!--            app:layout_constraintTop_toBottomOf="@+id/sp_package_choose" -->
 
         <Button
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:text="Kaydet"
             app:layout_constraintEnd_toEndOf="parent" />
-        <!--            app:layout_constraintTop_toBottomOf="@+id/sp_package_choose" -->
 
     </LinearLayout>
 
