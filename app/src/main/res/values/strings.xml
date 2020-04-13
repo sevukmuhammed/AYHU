@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AYHU</string>
+    <string name="skip_intro">Skip Intro</string>
+    <string name="next">Next</string>
     <string-array name="brands">
         <item>brand</item>
         <item>brand1</item>
