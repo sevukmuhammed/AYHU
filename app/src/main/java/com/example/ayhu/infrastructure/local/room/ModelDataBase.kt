@@ -9,7 +9,8 @@ import com.example.ayhu.data.localdb.ModelItemDAO
 import com.example.ayhu.data.model.ModelItem
 import java.util.concurrent.Executors
 
-@Database(entities = arrayOf(ModelItem::class), version = 1)
+@Database(entities = arrayOf(ModelItem::class), version = 2)
+
 abstract class ModelDataBase : RoomDatabase() {
 
     abstract fun carModelItemDAO(): ModelItemDAO

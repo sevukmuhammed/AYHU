@@ -5,14 +5,11 @@ import com.example.ayhu.data.model.VehicleInformation
 import retrofit2.Call
 import retrofit2.http.*
 
-
-
-
-
 /*
 Created by Batuhan Uzunoğlu
 Date : 2/18/2020
 */
+
 interface ApiService {
 
 //    @POST("AjaxProcess/GetFuelPricesList")

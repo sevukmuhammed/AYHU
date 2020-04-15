@@ -29,7 +29,7 @@ abstract class CarDataBase : RoomDatabase() {
                     CUSTOM = Room.databaseBuilder(
                         context.applicationContext,
                         CarDataBase::class.java,
-                        "bus.db"
+                        "car.db"
                     ).allowMainThreadQueries()
                         .addCallback(object : RoomDatabase.Callback() {
                             override fun onCreate(db: SupportSQLiteDatabase) {
