@@ -4,20 +4,20 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ayhu.R
-import com.example.ayhu.data.model.BaseModel
+import com.example.ayhu.data.model.IBaseModel
 import com.example.ayhu.viewholder.BaseViewHolder
 import com.example.ayhu.viewholder.CarAddedViewHolder
 import java.lang.IllegalArgumentException
 
 
 class AppRecyclerViewAdapter(
-    var items: MutableList<BaseModel>,
+    var items: MutableList<IBaseModel>,
     var recyclerViewClickListener: RecyclerViewClickListener
 ) : RecyclerView.Adapter<BaseViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
         var layoutInflater = LayoutInflater.from(parent.context)
         return when (viewType) {
-            BaseModel.TYPE_FUEL ->
+            IBaseModel.TYPE_FUEL ->
                 CarAddedViewHolder(
                     layoutInflater.inflate(
                         R.layout.item_card_car_added,
@@ -34,7 +34,7 @@ class AppRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
         when(items[position].type) {
-            BaseModel.TYPE_FUEL ->
+            IBaseModel.TYPE_FUEL ->
                 (holder as CarAddedViewHolder).bindView(
                     items[position],
                     position,

@@ -22,8 +22,7 @@ interface ApiService {
     @GET("gasPrice/turkeyGasoline")
     fun getWhereToBuyFuel(@Query("district") district:String, @Query("city") city: String):Call<FuelInformation>
 
+//    @GET("callback=?&cmd=getMakes&year=2000")
+//    fun getVehicleBrand():Call<VehicleInformation>
 
-
-    @POST("markalar/")
-    fun getVehicleInfo(): Call<VehicleInformation>
 }

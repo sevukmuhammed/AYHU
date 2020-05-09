@@ -7,27 +7,31 @@ import android.view.View
 import com.example.ayhu.R
 import com.example.ayhu.data.dto.FuelInfoDTO
 import com.example.ayhu.data.model.FuelInformation
-import com.example.movieclone.network.RetrofitFactory
 import kotlinx.android.synthetic.main.activity_vehicle_adding.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import android.content.Intent
+import android.widget.Toast
+import com.example.ayhu.data.model.VehicleInformation
+import com.example.ayhu.network.VehicleRetrofitFactory
 import com.example.ayhu.ui.MainActivity
+import com.example.movieclone.networkvaRretA.FuelRetrofitFactory
 
 /*
 Created by Emre UYGUN
 */
 
 class VehicleAddingActivity : AppCompatActivity() {
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         SystemUIVisibility()
         setContentView(R.layout.activity_vehicle_adding)
-
-        val apiService = RetrofitFactory.getFuelInformation()
+        getVehicleApiInformation()
+        val apiService = FuelRetrofitFactory.getFuelInformation()
             .getWhereToBuyFuel("kadikoy", "istanbul")//kullanicidan alınacak değer
+
         apiService.enqueue(object : Callback<FuelInformation> {
             override fun onFailure(call: Call<FuelInformation>, t: Throwable) {
                 Log.d("Başarısız","Başarısız")
@@ -46,23 +50,24 @@ class VehicleAddingActivity : AppCompatActivity() {
                 }
             }
         })
-
         goBackButton()
-
-//        val apiService=RetrofitVehicleFactory.getVehicleInformation().getVehicleInfo()
-////        apiService.enqueue(object : Callback<VehicleInformation>{
-////            override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
-////                Log.d("başarısız","başarısız")
-////            }
-////            override fun onResponse(
-////                call: Call<VehicleInformation>,
-////                response: Response<VehicleInformation>
-////            ){
-////                Log.d("Başarılı","Başarılı")
-////            }
-////        })
-
     }
+
+    fun getVehicleApiInformation(){
+        val vehicleApiService=VehicleRetrofitFactory.getFuelInformation().getVehicleBrand()
+        vehicleApiService.enqueue(object :Callback<VehicleInformation>{
+            override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
+                Log.d("Başarısız","Başarısız")
+            }
+            override fun onResponse(
+                call: Call<VehicleInformation>,
+                response: Response<VehicleInformation>
+            ) {
+                Log.d("Başarılı","Başarılı")
+            }
+        })
+    }
+
     fun SystemUIVisibility(){
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -71,6 +76,7 @@ class VehicleAddingActivity : AppCompatActivity() {
                 or View.SYSTEM_UI_FLAG_FULLSCREEN
                 or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
     }
+
     fun goBackButton(){
         goBack1.setOnClickListener {
             var intent:Intent= Intent(this, MainActivity::class.java)
