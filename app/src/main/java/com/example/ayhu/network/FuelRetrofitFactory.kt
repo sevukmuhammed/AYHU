@@ -1,12 +1,13 @@
-package com.example.movieclone.network
+package com.example.movieclone.networkvaRretA
 
+import com.example.movieclone.network.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Headers
 
-class RetrofitFactory {
+class FuelRetrofitFactory {
     companion object {
         var BASE_URL =
         "https://api.collectapi.com/"

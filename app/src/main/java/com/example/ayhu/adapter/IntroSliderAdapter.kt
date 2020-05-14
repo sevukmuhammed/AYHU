@@ -12,6 +12,7 @@ import com.example.ayhu.data.model.IntroSlideModel
 /*
 Created by Emre UYGUN
 */
+
 class IntroSliderAdapter(private val introSlides: List<IntroSlideModel>):
     RecyclerView.Adapter<IntroSliderAdapter.IntroSlideViewHolder>() {
 
