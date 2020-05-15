@@ -61,11 +61,13 @@ class IntroSlideActivity: AppCompatActivity() {
                 }
 
             }
-           txt_skipIntro.setOnClickListener{
-               Intent(applicationContext, MainActivity::class.java).also {
-                   startActivity(it)
-               }
-           }
+
+        }
+
+        txt_skipIntro.setOnClickListener{
+            Intent(applicationContext, MainActivity::class.java).also {
+                startActivity(it)
+            }
         }
     }
     // version
