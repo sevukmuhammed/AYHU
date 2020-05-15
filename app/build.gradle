@@ -52,10 +52,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0-alpha06'
     implementation 'androidx.viewpager2:viewpager2:1.1.0-alpha01'
     implementation("com.squareup.okhttp3:logging-interceptor:4.3.1")
-    // Room components
-    //noinspection GradleDependency
     implementation "androidx.room:room-runtime:$rootProject.roomVersion"
-    //noinspection GradleDependency
     implementation "androidx.room:room-ktx:$rootProject.roomVersion"
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"

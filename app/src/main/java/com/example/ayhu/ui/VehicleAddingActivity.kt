@@ -49,6 +49,10 @@ class VehicleAddingActivity : AppCompatActivity() {
             }
         })
         goBackButton()
+        btn_vehicle_save.setOnClickListener {
+            var intent=Intent(this,MapsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getVehicleApiInformation(){
