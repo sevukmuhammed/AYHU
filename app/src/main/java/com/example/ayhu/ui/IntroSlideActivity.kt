@@ -64,6 +64,7 @@ class IntroSlideActivity: AppCompatActivity() {
 
         }
 
+        // skip intro slider
         txt_skipIntro.setOnClickListener{
             Intent(applicationContext, MainActivity::class.java).also {
                 startActivity(it)
