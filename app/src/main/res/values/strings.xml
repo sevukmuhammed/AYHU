@@ -9,12 +9,7 @@
     <string name="app_name">AYHU</string>
     <string name="skip_intro">Skip Intro</string>
     <string name="next">Next</string>
-    <string-array name="brands">
-        <item>brand</item>
-        <item>brand1</item>
-        <item>brand2</item>
-        <item>brand3</item>
-    </string-array>
+
     <string-array name="models">
         <item>model</item>
         <item>model1</item>
@@ -28,7 +23,626 @@
         <item>package3</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
-    <string name="title_activity_maps2">Map</string>
+    <!--    Brands-->
+    <string-array name="brands">
+        <item>ALFA ROMEO</item>
+        <item>ASTON MARTIN</item>
+        <item>AUDI</item>
+        <item>BENTLEY</item>
+        <item>BMW</item>
+        <item>CADILLAC</item>
+        <item>CHEVROLET</item>
+        <item>CITROEN</item>
+        <item>DACIA</item>
+        <item>FERRARI</item>
+        <item>FIAT</item>
+        <item>FORD</item>
+        <item>HONDA</item>
+        <item>HYUNDAI</item>
+        <item>KIA</item>
+
+    </string-array>
+
+    <!--    Models-->
+    <string-array name="model_alfa_romeo">
+        <item>GIULIA</item>
+        <item>GIULIETTA</item>
+        <item>145</item>
+        <item>146</item>
+        <item>147</item>
+    </string-array>
+    <string-array name="model_aston_martin">
+        <item>DB11</item>
+        <item>VANTAGE</item>
+        <item>CYGNET</item>
+        <item>DB7</item>
+        <item>DB9</item>
+    </string-array>
+    <string-array name="model_audi">
+        <item>A1</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>A5</item>
+        <item>A6</item>
+    </string-array>
+    <string-array name="model_bentley">
+        <item>CONTINENTAL</item>
+        <item>FLYING SPUR</item>
+        <item>BROOKLANDS</item>
+        <item>MULSANNE</item>
+    </string-array>
+    <string-array name="model_bmw">
+        <item>1 SERIES</item>
+        <item>2 SERIES</item>
+        <item>3 SERIES</item>
+        <item>M SERIES</item>
+        <item>Z SERIES</item>
+    </string-array>
+
+    <string-array name="model_cadillac">
+        <item>CTS</item>
+        <item>BROUGHAM</item>
+        <item>DEVILLE</item>
+        <item>ELDORADO</item>
+        <item>FLEETWOOD</item>
+    </string-array>
+
+    <string-array name="model_chevrolet">
+        <item>AVEO</item>
+        <item>CAMARO</item>
+        <item>CORVETTE</item>
+        <item>CRUZE</item>
+        <item>EPICA</item>
+    </string-array>
+    <string-array name="model_citroen">
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>C3 PICASSO</item>
+        <item>C4</item>
+    </string-array>
+    <string-array name="model_dacia">
+        <item>LODGY</item>
+        <item>LOGAN</item>
+        <item>SANDERO</item>
+        <item>SOLENZA</item>
+    </string-array>
+    <string-array name="model_ferrari">
+        <item>458</item>
+        <item>488</item>
+        <item>599</item>
+        <item>812</item>
+        <item>CALIFORNIA</item>
+    </string-array>
+    <string-array name="model_fiat">
+        <item>124 SPIDER</item>
+        <item>500 FAMILY</item>
+        <item>ALBEA</item>
+        <item>BRAVO</item>
+        <item>EGEA</item>
+    </string-array>
+    <string-array name="model_ford">
+        <item>B-MAX</item>
+        <item>C-MAX</item>
+        <item>ESCORT</item>
+        <item>FIESTA</item>
+        <item>FOCUS</item>
+    </string-array>
+    <string-array name="model_honda">
+        <item>ACCORD</item>
+        <item>CITY</item>
+        <item>CIVIC</item>
+        <item>CR-Z</item>
+        <item>JAZZ</item>
+    </string-array>
+    <string-array name="model_hyundai">
+        <item>ACCENT</item>
+        <item>ACCENT BLUE</item>
+        <item>ACCENT ERA</item>
+        <item>ATOS</item>
+        <item>ELENTRA</item>
+    </string-array>
+    <string-array name="model_kia">
+        <item>CEED</item>
+        <item>CERATO</item>
+        <item>PICANTO</item>
+        <item>PRO CEED</item>
+        <item>RIO</item>
+    </string-array>
+
+
+    <!--    Packages-->
+    <!--    Start Alfa Romeo-->
+    <string-array name="package_giulia">
+        <item>2.0</item>
+    </string-array>
+
+    <string-array name="package_giulietta">
+        <item>1.4 TB</item>
+        <item>1.6 JTD</item>
+        <item>1.75 TDI</item>
+    </string-array>
+
+    <string-array name="package_145">
+        <item>1.4</item>
+        <item>1.6</item>
+        <item>1.7</item>
+        <item>2.0</item>
+    </string-array>
+
+    <string-array name="package_146">
+        <item>1.4</item>
+        <item>1.6</item>
+        <item>1.7</item>
+    </string-array>
+
+    <string-array name="package_147">
+        <item>1.6 TS</item>
+        <item>1.9</item>
+        <item>2.0 TS</item>
+    </string-array>
+    <!--    End Alfa Romeo-->
+
+    <!--    Start Aston Martin-->
+    <string-array name="package_db11">
+        <item>COUPE</item>
+    </string-array>
+
+    <string-array name="package_vantage">
+        <item>V8 VANTAGE</item>
+        <item>V8 VANTAGE S</item>
+    </string-array>
+
+    <string-array name="package_cygnet">
+        <item>1.33 VVT-I</item>
+    </string-array>
+
+    <string-array name="package_db7">
+        <item>COUPE</item>
+    </string-array>
+
+    <string-array name="package_db9">
+        <item>COUPE</item>
+        <item>GT 007 BOND EDITION</item>
+        <item>VOLANTE</item>
+    </string-array>
+    <!--    End Aston Martin-->
+
+    <!-- Start  Audi-->
+    <string-array name="package_a1">
+        <item>1.4 TFSI</item>
+        <item>1.6 TDI</item>
+    </string-array>
+
+    <string-array name="package_a3">
+        <item>A3 CABRIO</item>
+        <item>A3 HATCHBACK</item>
+        <item>A3 SEDAN</item>
+        <item>A3 SPORTBACK</item>
+    </string-array>
+
+    <string-array name="package_a4">
+        <item>A4 AVANT</item>
+        <item>A4 CABRIO</item>
+        <item>A4 SEDAN</item>
+        <item>A4 ALL QUATTRO</item>
+    </string-array>
+
+    <string-array name="package_a5">
+        <item>A5 CABRIO</item>
+        <item>A5 COUPE</item>
+        <item>A5 SPORTBACK</item>
+    </string-array>
+
+    <string-array name="package_a6">
+        <item>A6 SEDAN</item>
+        <item>A6 AVANT</item>
+        <item>A6 ALLROAD QUATTRO</item>
+    </string-array>
+    <!-- End  Audi -->
+
+    <!-- Start Bentley -->
+    <string-array name="package_continental">
+        <item>FLYING SPUR</item>
+        <item>GT</item>
+        <item>GTC</item>
+        <item>GT SPEED</item>
+        <item>GT SUPERSPORTS</item>
+    </string-array>
+
+    <string-array name="package_flying_spur">
+        <item>6.0</item>
+    </string-array>
+
+    <string-array name="package_brooklands">
+        <item>6.8</item>
+    </string-array>
+
+    <string-array name="package_mulsanne">
+        <item>6.75</item>
+    </string-array>
+    <!-- End  Bentley -->
+
+    <!-- Start  BMW -->
+    <string-array name="package_1_series">
+        <item>116D</item>
+        <item>116D ED</item>
+        <item>116I</item>
+        <item>118D</item>
+        <item>118I</item>
+    </string-array>
+
+    <string-array name="package_2_series">
+        <item>216D ACTIVE TOURER</item>
+        <item>216D GRAN COUPE</item>
+        <item>216D GRAN TOURER</item>
+        <item>218I</item>
+        <item>218I ACTIVE TOURER</item>
+    </string-array>
+
+    <string-array name="package_3_series">
+        <item>315</item>
+        <item>316</item>
+        <item>316CI</item>
+        <item>316I</item>
+        <item>316TI</item>
+    </string-array>
+
+    <string-array name="package_m_series">
+        <item>M1</item>
+        <item>M240I XDRIVE</item>
+        <item>M2 COMPETITION</item>
+        <item>M3</item>
+        <item>M3 CABRIO</item>
+    </string-array>
+
+    <string-array name="package_z_series">
+        <item>Z1</item>
+        <item>Z3</item>
+        <item>Z4</item>
+        <item>Z8</item>
+    </string-array>
+    <!-- End  BMW -->
+
+    <!-- Start CADILLAC -->
+    <string-array name="package_cts">
+        <item>2.0 L</item>
+        <item>2.8</item>
+        <item>3.2</item>
+        <item>3.6</item>
+    </string-array>
+
+    <string-array name="package_brougham">
+        <item>5.7 STD</item>
+    </string-array>
+
+    <string-array name="package_deville">
+        <item>4.6 CONCOURS</item>
+        <item>4.6 DTS</item>
+        <item>4.9 STD</item>
+    </string-array>
+
+    <string-array name="package_eldorado">
+        <item>4.9 STD</item>
+    </string-array>
+
+    <string-array name="package_fleetwood">
+        <item>4.9</item>
+        <item>5.7</item>
+    </string-array>
+    <!-- End CADILLAC  -->
+
+    <!--     Start CHEVROLET -->
+    <string-array name="package_aveo">
+        <item>1.2</item>
+        <item>1.3 D</item>
+        <item>1.4</item>
+    </string-array>
+
+    <string-array name="package_camaro">
+        <item>2.0</item>
+        <item>3.4</item>
+        <item>3.6</item>
+        <item>3.8</item>
+        <item>RS</item>
+    </string-array>
+
+    <string-array name="package_corvette">
+        <item>C4</item>
+        <item>C5</item>
+        <item>C6</item>
+        <item>C7</item>
+        <item>C8</item>
+    </string-array>
+
+    <string-array name="package_cruze">
+        <item>1.4 T</item>
+        <item>1.6</item>
+        <item>2.0 D</item>
+    </string-array>
+
+    <string-array name="package_epica">
+        <item>2.0 D LT</item>
+        <item>2.0 LT</item>
+    </string-array>
+    <!-- End CHEVROLET  -->
+
+    <!-- Start CITROEN -->
+    <string-array name="package_c1">
+        <item>1.0</item>
+        <item>1.0 VTI</item>
+        <item>1.4 HDI</item>
+    </string-array>
+
+    <string-array name="package_c2">
+        <item>1.4</item>
+        <item>1.4 HDI</item>
+        <item>1.6</item>
+    </string-array>
+
+    <string-array name="package_c3">
+        <item>1.2 PURETECH</item>
+        <item>1.2 VTI</item>
+        <item>1.4</item>
+        <item>1.4 E-HDI</item>
+        <item>1.4 HDI</item>
+    </string-array>
+
+    <string-array name="package_c3_picasso">
+        <item>1.4</item>
+        <item>1.6 E-HDI</item>
+        <item>1.6 HDI</item>
+    </string-array>
+
+    <string-array name="package_c4">
+        <item>1.2 PURETECH</item>
+        <item>1.4</item>
+        <item>1.4 VTI</item>
+        <item>1.6</item>
+        <item>1.6 BLUEHDI</item>
+    </string-array>
+    <!-- End  CITROEN -->
+
+    <!-- Start DACIA -->
+    <string-array name="package_lodgy">
+        <item>1.6 SCE</item>
+        <item>1.5 DCI</item>
+    </string-array>
+
+    <string-array name="package_logan">
+        <item>0.9 TCE</item>
+        <item>1.0 MCV</item>
+        <item>1.2</item>
+        <item>1.4</item>
+        <item>1.5 DCI</item>
+    </string-array>
+
+    <string-array name="package_sandero">
+        <item>0.9 TCE</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.4</item>
+        <item>1.5 BLUEDCI</item>
+    </string-array>
+
+    <string-array name="package_solenza">
+        <item>1.4</item>
+    </string-array>
+
+    <!-- End DACIA  -->
+
+    <!-- Start FERRARI -->
+    <string-array name="package_458">
+        <item>ITALIA</item>
+        <item>SPIDER</item>
+    </string-array>
+
+    <string-array name="package_488">
+        <item>GTB</item>
+        <item>PISTA</item>
+        <item>SPIDER</item>
+    </string-array>
+
+    <string-array name="package_599">
+        <item>GTB F1</item>
+    </string-array>
+
+    <string-array name="package_812">
+        <item>SUPERFAST</item>
+    </string-array>
+
+    <string-array name="package_california">
+        <item>4.3</item>
+        <item>T</item>
+    </string-array>
+    <!-- End FERRARI  -->
+
+    <!-- Start FIAT -->
+    <string-array name="package_124_spider">
+        <item>1.4 T MULTIAIR</item>
+    </string-array>
+
+    <string-array name="package_500_family">
+        <item>500 0.9 TWIN AIR</item>
+        <item>500 1.2</item>
+        <item>500 1.3 MJET</item>
+        <item>500 1.4</item>
+        <item>500 ABARTH</item>
+    </string-array>
+
+    <string-array name="package_albea">
+        <item>1.2</item>
+        <item>1.3 MULTIJET</item>
+        <item>1.4 FIRE</item>
+        <item>1.6</item>
+        <item>SOLE 1.3 MULTIJET</item>
+    </string-array>
+
+    <string-array name="package_bravo">
+        <item>1.4 </item>
+        <item>1.4 MULTIAIR</item>
+        <item>1.4 T-JET</item>
+        <item>1.4 TURBO</item>
+        <item>1.6</item>
+    </string-array>
+
+    <string-array name="package_egea">
+        <item>1.3 MULTIJET</item>
+        <item>1.4 FIRE</item>
+        <item>1.4 TJET</item>
+        <item>1.6 E-TORQ</item>
+        <item>1.6 MULTIJET</item>
+    </string-array>
+    <!-- End FIAT  -->
+
+
+    <!-- Start FORD -->
+    <string-array name="package_b_max">
+        <item>1.0</item>
+        <item>1.4</item>
+        <item>1.5 TDCI</item>
+        <item>1.6</item>
+        <item>1.6 TDCI</item>
+    </string-array>
+
+    <string-array name="package_c_max">
+        <item>1.5 TDCI</item>
+        <item>1.6</item>
+        <item>1.6 SCTI</item>
+        <item>1.6 TDCI</item>
+        <item>2.0 TDCI</item>
+    </string-array>
+
+    <string-array name="package_escort">
+        <item>1.3</item>
+        <item>1.4</item>
+        <item>1.6</item>
+        <item>1.8</item>
+        <item>COSWORTH</item>
+    </string-array>
+
+    <string-array name="package_fiesta">
+        <item>1.0</item>
+        <item>1.0 GTDI</item>
+        <item>1.1</item>
+        <item>1.25</item>
+        <item>1.3</item>
+    </string-array>
+
+    <string-array name="package_focus">
+        <item>1.0 ECOBOOST GTDI</item>
+        <item>1.4</item>
+        <item>1.5 TDCI</item>
+        <item>1.5 TI-VCT</item>
+        <item>1.6</item>
+    </string-array>
+    <!-- End FORD  -->
+
+    <!-- Start HONDA -->
+    <string-array name="package_accord">
+        <item>1.6</item>
+        <item>1.8</item>
+        <item>2.0</item>
+        <item>2.2</item>
+        <item>2.4</item>
+    </string-array>
+
+    <string-array name="package_city">
+        <item>1.4</item>
+    </string-array>
+
+    <string-array name="package_civic">
+        <item>1.4</item>
+        <item>1.5</item>
+        <item>1.5I VTEC</item>
+        <item>1.5 VTEC</item>
+        <item>1.6</item>
+    </string-array>
+
+    <string-array name="package_cr_z">
+        <item>GT</item>
+        <item>SPORT</item>
+    </string-array>
+
+    <string-array name="package_jazz">
+        <item>1.3</item>
+        <item>1.4</item>
+        <item>1.5</item>
+    </string-array>
+    <!-- End HONDA  -->
+
+    <!-- Start HYUNDAI -->
+    <string-array name="package_accent">
+        <item>1.3</item>
+        <item>1.5</item>
+        <item>1.5 CRDI</item>
+        <item>1.6</item>
+    </string-array>
+
+    <string-array name="package_accent_blue">
+        <item>1.4 CVVT</item>
+        <item>1.4 D-CVVT</item>
+        <item>1.6 CRDI</item>
+    </string-array>
+
+    <string-array name="package_accent_era">
+        <item>1.4</item>
+        <item>1.5 CRDI</item>
+        <item>1.5 CDRI-VGT</item>
+        <item>1.6</item>
+    </string-array>
+
+    <string-array name="package_atos">
+        <item>1.0</item>
+        <item>1.1</item>
+    </string-array>
+
+    <string-array name="package_elentra">
+        <item>1.5</item>
+        <item>1.6</item>
+        <item>1.6 CRDI</item>
+        <item>1.6 D-CVVT</item>
+        <item>1.6 MPI</item>
+    </string-array>
+    <!-- End HYUNDAI  -->
+
+    <!-- Start KIA -->
+    <string-array name="package_ceed">
+        <item>1.4</item>
+        <item>1.4 T-GDI</item>
+        <item>1.6</item>
+        <item>1.6 CRDI</item>
+    </string-array>
+
+    <string-array name="package_cerato">
+        <item>1.6 MPI</item>
+        <item>1.5 CRDI</item>
+        <item>1.6</item>
+        <item>1.6 CRDI</item>
+        <item>1.6 EX</item>
+    </string-array>
+
+    <string-array name="package_picanto">
+        <item>1.0 MPI COOL</item>
+        <item>1.0 MPI LIVE</item>
+        <item>1.1 EX</item>
+        <item>1.1 HIPER</item>
+        <item>1.25 EX</item>
+    </string-array>
+
+    <string-array name="package_pro_ceed">
+        <item>1.6</item>
+        <item>1.6 CRDI</item>
+    </string-array>
+
+    <string-array name="package_rio">
+        <item>1.25 CVVT</item>
+        <item>1.3</item>
+        <item>1.4 CRDI</item>
+        <item>1.4 CVVT</item>
+        <item>1.4 EX</item>
+    </string-array>
+    <!-- End  KIA -->
 
 </resources>
 
