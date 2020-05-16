@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FEDE00"
     tools:context=".ui.VehicleAddingActivity">
-
+bash
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
