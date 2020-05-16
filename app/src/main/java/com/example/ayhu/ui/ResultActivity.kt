@@ -23,9 +23,10 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
         var distance=distanceBetween(lat1,long1)/1000.0
+        val name = intent.getStringExtra("sehir")
 
         val apiService = FuelRetrofitFactory.getFuelInformation()
-            .getWhereToBuyFuel("kadikoy", "istanbul")//kullanicidan alınacak değer
+            .getWhereToBuyFuel( name)//kullanicidan alınacak değer
 
         apiService.enqueue(object : Callback<FuelInformation> {
             override fun onFailure(call: Call<FuelInformation>, t: Throwable) {

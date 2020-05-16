@@ -3,6 +3,7 @@ package com.example.ayhu
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Resources
 import android.location.Address
 import android.location.Geocoder
 import android.location.Location
@@ -21,6 +22,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_maps.*
 import java.io.IOException
@@ -53,12 +55,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         btn_Git.setOnClickListener {
             val location = edt_location.text.toString()
-            val location1=edt_location.text.toString()
             if (location != "") {
                 var adressList: List<Address>? = null
                 val geocoder = Geocoder(this@MapsActivity)
                 try {
-                    adressList = geocoder.getFromLocationName(location, 2)
+                    adressList = geocoder.getFromLocationName(location, 1)
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
@@ -68,16 +69,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 mMap!!.addMarker(MarkerOptions().position(latLng).title("$location"))
                 mMap!!.animateCamera(CameraUpdateFactory.newLatLng(latLng))
                 dizi.add(latLng)
-                Log.d("asdf",address.toString())
-                Log.d("asd",dizi.toString())
             }
             btn_calculate.setOnClickListener {
                 val intent = Intent(this, ResultActivity::class.java)
                 lat1=dizi[0]
                 long1=dizi[1]
-                Log.d("mami",lat1.toString())
-                Log.d("mami",long1.toString())
-
+                intent.putExtra("sehir",location)
                 startActivity(intent)
                 finish()
             }
@@ -99,7 +96,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         }
 
-      /*  try {
+        try {
             val success = googleMap.setMapStyle(
                 MapStyleOptions.loadRawResourceStyle(
                     this, R.raw.maps))
@@ -109,7 +106,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         } catch (e: Resources.NotFoundException) {
             Log.e("MapsActivity", "Can't find style. Error: ", e)
-        }*/
+        }
 
     }
 

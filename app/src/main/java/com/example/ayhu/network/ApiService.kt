@@ -20,8 +20,8 @@ interface ApiService {
         , "content-type: application/json"
     )
     @GET("gasPrice/turkeyGasoline")
-    fun getWhereToBuyFuel(@Query("district") district:String, @Query("city") city: String):Call<FuelInformation>
-
+    fun getWhereToBuyFuel( @Query("city") city: String):Call<FuelInformation>
+   // @Query("district") district:String
 //    @GET("callback=?&cmd=getMakes&year=2000")
 //    fun getVehicleBrand():Call<VehicleInformation>
 
