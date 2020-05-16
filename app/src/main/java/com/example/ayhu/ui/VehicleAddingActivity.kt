@@ -1,4 +1,4 @@
-package com.example.ayhu.ui.vehicleadding
+package com.example.ayhu.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,10 +12,8 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import android.content.Intent
-import android.widget.Toast
 import com.example.ayhu.data.model.VehicleInformation
 import com.example.ayhu.network.VehicleRetrofitFactory
-import com.example.ayhu.ui.MainActivity
 import com.example.movieclone.networkvaRretA.FuelRetrofitFactory
 
 /*
@@ -26,7 +24,7 @@ class VehicleAddingActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        SystemUIVisibility()
+        systemUIVisibility()
         setContentView(R.layout.activity_vehicle_adding)
         getVehicleApiInformation()
         val apiService = FuelRetrofitFactory.getFuelInformation()
@@ -51,9 +49,13 @@ class VehicleAddingActivity : AppCompatActivity() {
             }
         })
         goBackButton()
+        btn_vehicle_save.setOnClickListener {
+            var intent=Intent(this,MapsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    fun getVehicleApiInformation(){
+    private fun getVehicleApiInformation(){
         val vehicleApiService=VehicleRetrofitFactory.getFuelInformation().getVehicleBrand()
         vehicleApiService.enqueue(object :Callback<VehicleInformation>{
             override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
@@ -68,7 +70,7 @@ class VehicleAddingActivity : AppCompatActivity() {
         })
     }
 
-    fun SystemUIVisibility(){
+    private fun systemUIVisibility(){
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -77,9 +79,9 @@ class VehicleAddingActivity : AppCompatActivity() {
                 or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
     }
 
-    fun goBackButton(){
+    private fun goBackButton(){
         goBack1.setOnClickListener {
-            var intent:Intent= Intent(this, MainActivity::class.java)
+            val intent= Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

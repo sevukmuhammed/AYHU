@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.ayhu.R
-import com.example.ayhu.ui.vehicleadding.VehicleAddingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SystemUIVisibility()
         setContentView(R.layout.activity_main)
 
 //                val apiVehicleService= RetrofitVehicleFactory.getVehicleInformation().getVehicleInfo()

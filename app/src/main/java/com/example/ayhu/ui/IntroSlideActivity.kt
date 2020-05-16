@@ -1,6 +1,8 @@
 package com.example.ayhu.ui
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
@@ -19,6 +21,9 @@ Created by Emre UYGUN
 */
 
 class IntroSlideActivity: AppCompatActivity() {
+
+    lateinit var preferences: SharedPreferences
+    val pref_show_intro = "Intro"
 
     private val introSliderAdapter = IntroSliderAdapter(
         listOf(
@@ -43,37 +48,55 @@ class IntroSlideActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.onboarding_screens)
+
+        // show only start
+        preferences = getSharedPreferences("IntroSlider", Context.MODE_PRIVATE)
+        if (!preferences.getBoolean(pref_show_intro, true)){
+            Intent(applicationContext, MainActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
         viewPager_introSlide.adapter = introSliderAdapter
         setupIndicators()
         setCurrentIndicator(0)
-        viewPager_introSlide.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+
+        viewPager_introSlide.registerOnPageChangeCallback(object :
+            ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 setCurrentIndicator(position)
+
+                val editor = preferences.edit()
+                editor.putBoolean(pref_show_intro, false)
+                editor.apply()
+
             }
         })
-        btn_Next.setOnClickListener{
-            if (viewPager_introSlide.currentItem + 1 < introSliderAdapter.itemCount){
+
+        btn_Next.setOnClickListener {
+            if (viewPager_introSlide.currentItem + 1 < introSliderAdapter.itemCount) {
                 viewPager_introSlide.currentItem += 1
-            }else{
+
+            } else {
                 Intent(applicationContext, MainActivity::class.java).also {
                     startActivity(it)
                 }
-
             }
-           txt_skipIntro.setOnClickListener{
-               Intent(applicationContext, MainActivity::class.java).also {
-                   startActivity(it)
-               }
-           }
+        }
+
+        txt_skipIntro.setOnClickListener {
+            Intent(applicationContext, MainActivity::class.java).also {
+                startActivity(it)
+            }
         }
     }
-    // version
+
 
     private fun setupIndicators() {
+
         val indicators = arrayOfNulls<ImageView>(introSliderAdapter.itemCount)
-        val layoutParams: LinearLayout.LayoutParams =
-            LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        val layoutParams: LinearLayout.LayoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         layoutParams.setMargins(8, 0, 8, 0)
         for (i in indicators.indices) {
             indicators[i] = ImageView(applicationContext)
