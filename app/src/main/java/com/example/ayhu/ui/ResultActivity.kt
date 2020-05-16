@@ -5,6 +5,7 @@ import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.example.ayhu.R
 import com.example.ayhu.data.AppConstants.Companion.lat1
 import com.example.ayhu.data.AppConstants.Companion.long1
@@ -21,6 +22,7 @@ class ResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SystemUIVisibility()
         setContentView(R.layout.activity_result)
         //var distance=distanceBetween(lat1,long1)/1000.0
         /*
@@ -66,5 +68,13 @@ class ResultActivity : AppCompatActivity() {
         loc2.latitude = latLng2.latitude
         loc2.longitude = latLng2.longitude
         return loc1.distanceTo(loc2)
+    }
+    fun SystemUIVisibility(){
+        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
     }
 }
