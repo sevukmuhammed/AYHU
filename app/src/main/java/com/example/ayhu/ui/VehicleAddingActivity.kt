@@ -17,10 +17,6 @@ import com.example.ayhu.data.model.VehicleInformation
 import com.example.ayhu.network.VehicleRetrofitFactory
 import com.example.movieclone.networkvaRretA.FuelRetrofitFactory
 
-/*
-Created by Emre UYGUN
-*/
-
 class VehicleAddingActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {

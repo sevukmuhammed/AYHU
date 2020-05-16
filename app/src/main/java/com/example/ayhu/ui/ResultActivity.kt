@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.ayhu.R
-import com.example.ayhu.data.AppConstants
 import com.example.ayhu.data.AppConstants.Companion.lat1
 import com.example.ayhu.data.AppConstants.Companion.long1
 import com.example.ayhu.data.dto.FuelInfoDTO
@@ -16,7 +15,7 @@ import com.google.android.gms.maps.model.LatLng
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.lang.Double.parseDouble
+
 
 class ResultActivity : AppCompatActivity() {
 
