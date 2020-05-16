@@ -11,20 +11,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SystemUIVisibility()
         setContentView(R.layout.activity_main)
-
-//                val apiVehicleService= RetrofitVehicleFactory.getVehicleInformation().getVehicleInfo()
-//        apiVehicleService.enqueue(object : Callback<VehicleInformation>{
-//            override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
-//                Log.d("başarısız","başarısız")
-//            }
-//            override fun onResponse(
-//                call: Call<VehicleInformation>,
-//                response: Response<VehicleInformation>
-//            ){
-//                Log.d("Başarılı","Başarılı")
-//            }
-//        })
 
 
         cv_vehicle_adding.setOnClickListener {

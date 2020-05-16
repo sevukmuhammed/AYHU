@@ -27,48 +27,11 @@ class VehicleAddingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         systemUIVisibility()
         setContentView(R.layout.activity_vehicle_adding)
-        getVehicleApiInformation()
-        val apiService = FuelRetrofitFactory.getFuelInformation()
-            .getWhereToBuyFuel("kadikoy", "istanbul")//kullanicidan alınacak değer
-
-        apiService.enqueue(object : Callback<FuelInformation> {
-            override fun onFailure(call: Call<FuelInformation>, t: Throwable) {
-                Log.d("Başarısız","Başarısız")
-            }
-            override fun onResponse(
-                call: Call<FuelInformation>,
-                response: Response<FuelInformation>
-            ) {
-                Log.d("Başarılı","Başarılı")
-                response.body()?.result?.forEach {
-                    var fuelInfoDTO= FuelInfoDTO(
-                        benzin = it.benzin,
-                        marka = it.marka
-                    )
-                    Log.d("marka",it.marka)
-                }
-            }
-        })
         goBackButton()
         btn_vehicle_save.setOnClickListener {
             var intent=Intent(this, MapsActivity::class.java)
             startActivity(intent)
         }
-    }
-
-    private fun getVehicleApiInformation(){
-        val vehicleApiService=VehicleRetrofitFactory.getFuelInformation().getVehicleBrand()
-        vehicleApiService.enqueue(object :Callback<VehicleInformation>{
-            override fun onFailure(call: Call<VehicleInformation>, t: Throwable) {
-                Log.d("Başarısız","Başarısız")
-            }
-            override fun onResponse(
-                call: Call<VehicleInformation>,
-                response: Response<VehicleInformation>
-            ) {
-                Log.d("Başarılı","Başarılı")
-            }
-        })
     }
 
     private fun systemUIVisibility(){
