@@ -22,13 +22,14 @@ class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
-        var distance=distanceBetween(lat1,long1)/1000.0
+        //var distance=distanceBetween(lat1,long1)/1000.0
+        /*
         var latLng1:LatLng= LatLng(39.925533, 32.866287)
         if (lat1==null && long1==null){
             lat1=latLng1
             long1= latLng1
         }else{
-            var distance=distanceBetween(lat1,long1)/1000.0
+            //var distance=distanceBetween(lat1,long1)/1000.0
         }
         val name = intent.getStringExtra("sehir")
 
@@ -53,7 +54,10 @@ class ResultActivity : AppCompatActivity() {
                 }
             }
         })
+
+         */
     }
+
     private fun distanceBetween(latLng1: LatLng, latLng2: LatLng): Float {
         val loc1 = Location(LocationManager.GPS_PROVIDER)
         val loc2 = Location(LocationManager.GPS_PROVIDER)
