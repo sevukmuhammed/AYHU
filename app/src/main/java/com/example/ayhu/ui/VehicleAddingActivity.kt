@@ -12,6 +12,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import android.content.Intent
+import com.example.ayhu.MapsActivity
 import com.example.ayhu.data.model.VehicleInformation
 import com.example.ayhu.network.VehicleRetrofitFactory
 import com.example.movieclone.networkvaRretA.FuelRetrofitFactory
@@ -40,7 +41,7 @@ class VehicleAddingActivity : AppCompatActivity() {
             ) {
                 Log.d("Başarılı","Başarılı")
                 response.body()?.result?.forEach {
-                    var fuelInfoDTO:FuelInfoDTO= FuelInfoDTO(
+                    var fuelInfoDTO= FuelInfoDTO(
                         benzin = it.benzin,
                         marka = it.marka
                     )
@@ -50,7 +51,7 @@ class VehicleAddingActivity : AppCompatActivity() {
         })
         goBackButton()
         btn_vehicle_save.setOnClickListener {
-            var intent=Intent(this,MapsActivity::class.java)
+            var intent=Intent(this, MapsActivity::class.java)
             startActivity(intent)
         }
     }
