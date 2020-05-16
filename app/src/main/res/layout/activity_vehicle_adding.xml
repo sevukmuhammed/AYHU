@@ -33,15 +33,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="382dp"
             android:layout_height="448dp"
-            android:background="@color/Blue"
+            android:background="@drawable/sari_cerceve"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                 android:id="@+id/sp_brand_choose"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_width="315dp"
+                android:layout_height="43dp"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -51,26 +51,26 @@
 
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                 android:id="@+id/sp_model_choose"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginTop="96dp"
+                android:layout_width="315dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="80dp"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.761"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sp_brand_choose" />
 
-
             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
                 android:id="@+id/sp_package_choose"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginTop="100dp"
+                android:layout_width="315dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="80dp"
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.761"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sp_model_choose" />
+
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
@@ -78,11 +78,12 @@
                 android:layout_marginBottom="6dp"
                 android:text="Marka"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/sp_brand_choose"
                 app:layout_constraintStart_toStartOf="@+id/sp_brand_choose"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.954" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -90,7 +91,8 @@
                 android:layout_height="wrap_content"
                 android:text="Model"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/sp_model_choose"
                 app:layout_constraintStart_toStartOf="@+id/sp_model_choose"
                 app:layout_constraintTop_toBottomOf="@+id/sp_brand_choose"
@@ -104,7 +106,8 @@
                 android:layout_marginBottom="4dp"
                 android:text="Paket"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/sp_package_choose"
                 app:layout_constraintStart_toStartOf="@+id/sp_package_choose"
                 app:layout_constraintTop_toBottomOf="@+id/sp_model_choose"
@@ -149,9 +152,9 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="247dp"
 
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -177,9 +180,9 @@
                 android:id="@+id/btn_vehicle_save"
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/geri_button"
                 android:text="Kaydet"
                 android:textColor="#000000"
-                android:background="@drawable/geri_button"
                 app:layout_constraintEnd_toEndOf="parent" />
 
         </LinearLayout>

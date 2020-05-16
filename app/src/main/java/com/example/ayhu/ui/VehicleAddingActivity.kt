@@ -16,10 +16,12 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.example.ayhu.MapsActivity
+
 import com.example.ayhu.data.model.VehicleInformation
 import com.example.ayhu.network.VehicleRetrofitFactory
 import com.example.movieclone.networkvaRretA.FuelRetrofitFactory
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner
+
 
 class VehicleAddingActivity : AppCompatActivity() {
     lateinit var arrayModel:Array<String?>
@@ -42,7 +44,7 @@ class VehicleAddingActivity : AppCompatActivity() {
         val spinnerPackage=findViewById<Spinner>(R.id.sp_package_choose) as SearchableSpinner
 
         var arrayBrand=resources.getStringArray(R.array.brands)
-        arrayAdapter= ArrayAdapter(this,android.R.layout.simple_spinner_dropdown_item,arrayBrand)
+        arrayAdapter= ArrayAdapter(this,android.R.layout.simple_spinner_item,arrayBrand)
         spinnerBrand.adapter=arrayAdapter
 
         //Bu if kaldırabilir
