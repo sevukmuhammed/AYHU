@@ -23,6 +23,13 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
         var distance=distanceBetween(lat1,long1)/1000.0
+        var latLng1:LatLng= LatLng(39.925533, 32.866287)
+        if (lat1==null && long1==null){
+            lat1=latLng1
+            long1= latLng1
+        }else{
+            var distance=distanceBetween(lat1,long1)/1000.0
+        }
         val name = intent.getStringExtra("sehir")
 
         val apiService = FuelRetrofitFactory.getFuelInformation()
